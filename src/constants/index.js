@@ -32,6 +32,7 @@ export const PROJECTS = [
   {
     title: "Koi Veterinarian System",
     image: koimed,
+    link: "https://koimed.anhtudev.works",
     description:
       "A web application designed for Koi fish veterinary services, featuring appointment booking, treatment scheduling, and pond health tracking. Integrated AWS S3, Google Login, and payment gateways like MoMo and VNPay.",
     technologies: ["ReactJS", "Ant Design", "Spring Boot", "AWS S3", "VNPay","Github Actions"],
@@ -39,6 +40,7 @@ export const PROJECTS = [
   {
     title: "SAT Mock Test System",
     image: sat,
+    link: "https://sat.chasedream.edu.vn/",
     description:
       "A web-based platform that simulates the real SAT Test environment, allowing students to practice SAT tests in a realistic format and enabling teachers to manage tests, assign students, and review their results.",
     technologies: ["ReactJS", "Spring Boot", "MySQL", "JWT","Github Actions"],
@@ -46,6 +48,7 @@ export const PROJECTS = [
   {
     title: "POS Application",
     image: pos,
+    link: "https://demo.anhtudev.works/POS",
     description:
       "A desktop POS system with barcode scanning functionality, supporting checkout processes, inventory management, and warehouse organization. Developed using WPF and .NET Framework.",
     technologies: ["C#", ".NET Framework", "WPF", "SQL Server"],
