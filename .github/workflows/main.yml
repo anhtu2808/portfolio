@@ -1,0 +1,48 @@
+name: CI/CD - Build and Deploy Porfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy Porfolio
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout code
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # 2. Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    # 3. Install dependencies
+    - name: Install Dependencies
+      run: npm ci
+
+    # 4. Build project
+    - name: Build Vite App
+      run: npm run build
+
+    # 5. Deploy to server
+    - name: Deploy Vite App
+      env:
+        SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+      run: |
+        # Thiết lập SSH Key
+        mkdir -p ~/.ssh
+        echo "$SERVER_SSH_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H 178.128.86.47 >> ~/.ssh/known_hosts
+
+        # Xóa nội dung cũ và upload nội dung mới
+        ssh root@178.128.86.47 "rm -rf /var/www/anhtudev.works/*"
+        scp -r dist/* root@178.128.86.47:/var/www/anhtudev.works/
+
+        # Reload Nginx
+        ssh root@178.128.86.47 "sudo systemctl reload nginx"
