@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 /*----------------------------------*\
 *BASE
@@ -13,23 +13,22 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /*----------------------------------*\
 *UTILITIES
 \*---------------------------------- */
 .container {
-  @apply px-4 mx-auto lg:max-w-6xl lg:px-8
+  @apply px-4 mx-auto lg:max-w-6xl lg:px-8;
 }
 .img-box {
-  @apply bg-zinc-700 overflow-hidden
+  @apply bg-zinc-700 overflow-hidden w-11 h-11 flex-shrink-0;
 }
 .img-cover {
-  @apply w-full h-full object-cover
+  @apply w-full h-full object-cover object-center;
 }
 
 .material-symbols-rounded {
   @apply w-[1em] h-[1em] overflow-hidden;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /*----------------------------------*\
@@ -38,36 +37,59 @@ html {
 
 /* Menu btn */
 .menu-btn {
-  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95
+  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95;
 }
 /*----------------------------------*/
 
 /* Navbar */
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 backdrop-blur-2xl;
 }
 
 .navbar.active {
-  @apply opacity-100 scale-100 blur-0 visible bg-zinc-800/80
+  @apply opacity-100 scale-100 blur-0 visible bg-zinc-800/80;
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium text-zinc-50/50 hover:text-zinc-50 transition-colors tracking-wide 
+  @apply grid items-center h-9 px-4 text-sm font-medium text-zinc-50/50 hover:text-zinc-50 transition-colors tracking-wide;
 }
 .nav-link.active {
-  @apply text-zinc-900 duration-500
+  @apply text-zinc-900 duration-500;
 }
 .navbar .active-box {
   @apply absolute bg-zinc-50 rounded-lg -z-10
-  transition-[top,left] duration-500
+  transition-[top,left] duration-500;
 }
 
 /* button */
 .btn {
-  @apply max-w-max h-9 flex items-center text-sm ring-1 bg-zinc-50/5 gap-2 px-4 rounded-xl font-medium ring-zinc-50/5 ring-inset transition-[background-color] 
+  @apply max-w-max h-9 flex items-center text-sm ring-1 bg-zinc-50/5 gap-2 px-4 rounded-xl font-medium ring-zinc-50/5 ring-inset transition-[background-color];
 }
 
 .btn-secondary {
-  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
 }
+
+.stats-box {
+  @apply flex flex-col items-center rounded-xl border border-neutral-800 bg-neutral-900/50 p-6 
+  transition-all duration-300 hover:border-neutral-700 hover:bg-neutral-900/80 hover:shadow-lg;
+}
+.stats-icon {
+  @apply mb-4 text-3xl;
+}
+/* Phiên bản 1: Gradient teal-cyan */
+.highlight-number {
+  @apply text-xl font-bold;
+  background: linear-gradient(120deg, #00F5A0 0%, #00D9F5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Phiên bản 2: Gradient purple-pink */
+.highlight-number {
+  @apply text-xl font-bold;
+  background: linear-gradient(120deg, #FF0080 0%, #7928CA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} 
 

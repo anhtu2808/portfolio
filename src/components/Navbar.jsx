@@ -69,6 +69,9 @@ const Navbar = ({ navOpen }) => {
             className: 'nav-link md:hidden'
         }
     ];
+
+    
+
     return (
 
         <nav className={"navbar " + (navOpen ? 'active' : '')}>
@@ -78,6 +81,7 @@ const Navbar = ({ navOpen }) => {
                     href={link}
                     className={className}
                     ref={ref}
+                    id={`${label}-link`}
                     onClick={activeCurrentLink}
                 >
                     {label}
