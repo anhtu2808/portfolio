@@ -1,7 +1,7 @@
 import GA4React from 'ga-4-react';
 
 // Thay YOUR_MEASUREMENT_ID bằng ID từ Google Analytics của bạn
-const ga4react = new GA4React('G-PZ0KMNMRLS');
+const ga4react = new GA4React('G-PZ0KMNMRLS', { debug: true });
 
 export const initGA = () => {
     try {
