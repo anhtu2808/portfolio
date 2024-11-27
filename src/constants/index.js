@@ -36,7 +36,7 @@ export const PROJECTS = [
     link: "https://koimed.anhtudev.works",
     video: "https://www.youtube.com/embed/sSDgWOXnOhg?si=2bytXfmx5kbHXpdr",
     description:
-      "A web application designed for Koi fish veterinary services, featuring appointment booking, treatment scheduling, and pond health tracking. Integrated AWS S3, Google Login, and payment gateways like MoMo and VNPay.",
+      "A web application designed for Koi fish veterinary services, It enables users to book veterinary appointments, manage treatment schedules, and track pond health. The system includes features for managing doctors, treatments, and service schedules, as well as providing news updates, service ratings, and user feedback. Perfect for ensuring the well-being of your Koi fish and maintaining a healthy pond environment.",
     technologies: ["ReactJS", "Redux", "Bootstrap"  , "Ant Design", "Spring Boot", "AWS S3", "VNPay", "Github Actions"],
   },
   {
@@ -44,9 +44,9 @@ export const PROJECTS = [
     image: sat,
     github: null,
     link: "https://sat.chasedream.edu.vn/",
-    video: "https://www.youtube.com/embed/oC5nO0AvOeE?si=QNMrPw9pYyJciKeK",
+    video: "https://www.youtube.com/embed/MdmjfHVekuA?si=LWdydJhoggkuLE83",
     description:
-      "A web-based platform that simulates the real SAT Test environment, allowing students to practice SAT tests in a realistic format and enabling teachers to manage tests, assign students to do practice test/entrance test, and review their results.",
+      "A web-based platform that simulates the real SAT Test environment, allowing students to practice SAT tests in a realistic format, review thier choices, and enabling teachers to manage tests, assign students to do practice test/entrance test, and review their results.",
     technologies: ["ReactJS", "Redux", "Bootstrap", "Spring Boot", "MySQL", "MapStruct", "JWT", "Github Actions CI/CD"],
   },
   {

@@ -28,7 +28,7 @@ const About = () => {
                             <div className="stats-icon">⚡</div>
                             <h3 className="text-xl font-bold text-neutral-200 group-hover:text-white">Experience</h3>
                             <p className="text-neutral-400 group-hover:text-neutral-300">
-                                <span className="highlight-number">1+</span> Years of Development
+                                <span className="highlight-number">1+</span> Years of Web Development
                             </p>
                         </div>
                         <div className="stats-box group cursor-pointer" onClick={() => window.location.href = '/#project'}>
