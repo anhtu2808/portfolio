@@ -10,11 +10,16 @@ import { ReactLenis } from "lenis/react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
+import { initGA } from "./analytics"
+import { useEffect } from "react"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
 const App = () => {
-  
+  useEffect(() => {
+    initGA();
+  }, []);
+
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:text-cyan-300 selection:bg-cyan-900">
       <div className="fixed top-0 -z-10 h-full w-full">

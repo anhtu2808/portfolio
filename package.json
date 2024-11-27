@@ -12,6 +12,7 @@
   "dependencies": {
     "@gsap/react": "^2.1.1",
     "framer-motion": "^11.11.17",
+    "ga-4-react": "^0.1.281",
     "gsap": "^3.12.5",
     "lenis": "^1.1.17",
     "prop-types": "^15.8.1",
