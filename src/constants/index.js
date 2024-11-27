@@ -1,6 +1,5 @@
-// import project1 from "../assets/projects/project-1.jpg";
-// import project2 from "../assets/projects/project-2.jpg";
-// import project3 from "../assets/projects/project-3.jpg";
+import people1 from "../assets/people-1.jpg";
+import people2 from "../assets/people-2.jpg";
 import pos from "../assets/projects/pos.png";
 import koimed from "../assets/projects/koimed.png";
 import sat from "../assets/projects/sat.png";
@@ -28,27 +27,30 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
-  
+
   {
     title: "Koi Veterinarian System",
     image: koimed,
     link: "https://koimed.anhtudev.works",
+    video: "https://www.youtube.com/embed/sSDgWOXnOhg?si=2bytXfmx5kbHXpdr",
     description:
       "A web application designed for Koi fish veterinary services, featuring appointment booking, treatment scheduling, and pond health tracking. Integrated AWS S3, Google Login, and payment gateways like MoMo and VNPay.",
-    technologies: ["ReactJS", "Ant Design", "Spring Boot", "AWS S3", "VNPay","Github Actions"],
+    technologies: ["ReactJS", "Ant Design", "Spring Boot", "AWS S3", "VNPay", "Github Actions"],
   },
   {
     title: "SAT Mock Test System",
     image: sat,
     link: "https://sat.chasedream.edu.vn/",
+    video: "https://www.youtube.com/embed/oC5nO0AvOeE?si=QNMrPw9pYyJciKeK",
     description:
       "A web-based platform that simulates the real SAT Test environment, allowing students to practice SAT tests in a realistic format and enabling teachers to manage tests, assign students, and review their results.",
-    technologies: ["ReactJS", "Spring Boot", "MySQL", "JWT","Github Actions"],
+    technologies: ["ReactJS", "Spring Boot", "MySQL", "JWT", "Github Actions"],
   },
   {
     title: "POS Application",
     image: pos,
     link: "https://demo.anhtudev.works/POS",
+    video: "https://www.youtube.com/embed/5yythVfMz_w?si=xSTpxuVNUqzaOWW-",
     description:
       "A desktop POS system with barcode scanning functionality, supporting checkout processes, inventory management, and warehouse organization. Developed using WPF and .NET Framework.",
     technologies: ["C#", ".NET Framework", "WPF", "SQL Server"],
@@ -60,3 +62,18 @@ export const CONTACT = {
   phoneNo: "+84 3892 755 13 ",
   email: "dangmaianhtu@gmail.com",
 };
+
+export const REVIEWS = [
+  {
+    content: 'Exceptional web development! Delivered a seamless, responsive site with clean code and great UX.',
+    name: "Sophia Ramirez",
+    image: people1,
+    company: "PixelForge",
+  },
+  {
+    content: 'Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.',
+    name: "Ethan Caldwell",
+    image: people2,
+    company: "NexaWave",
+  },
+];
