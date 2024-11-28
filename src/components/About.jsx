@@ -22,19 +22,21 @@ const About = () => {
                         <div className="stats-box group">
                             <div className="stats-icon">🎓</div>
                             <h3 className="text-xl font-bold text-neutral-200 group-hover:text-white">Education</h3>
-                            <p className="text-neutral-400 group-hover:text-neutral-300">FPT University</p>
+                            <p className="text-neutral-400 group-hover:text-neutral-300 text-center">
+                                FPT University
+                            </p>
                         </div>
                         <div className="stats-box group cursor-pointer" onClick={() => window.location.href = '/#work'}>
                             <div className="stats-icon">⚡</div>
                             <h3 className="text-xl font-bold text-neutral-200 group-hover:text-white">Experience</h3>
-                            <p className="text-neutral-400 group-hover:text-neutral-300">
+                            <p className="text-neutral-400 group-hover:text-neutral-300 text-center">
                                 <span className="highlight-number">1+</span> Years of Web Development
                             </p>
                         </div>
                         <div className="stats-box group cursor-pointer" onClick={() => window.location.href = '/#project'}>
                             <div className="stats-icon">🚀</div>
                             <h3 className="text-xl font-bold text-neutral-200 group-hover:text-white">Projects</h3>
-                            <p className="text-neutral-400 group-hover:text-neutral-300">
+                            <p className="text-neutral-400 group-hover:text-neutral-300 text-center">
                                 <span className="highlight-number">7+</span> Projects
                             </p>
                         </div>

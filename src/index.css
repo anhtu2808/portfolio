@@ -93,3 +93,52 @@ html {
   -webkit-text-fill-color: transparent;
 } 
 
+
+
+/* For the horizontal scroll container */
+.custom-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: rgba(120, 120, 120, 0.5) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Scrollbar background */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.5); /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded edges */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.8); /* Hover effect for thumb */
+}
+
+/* Custom scrollbar for the entire app */
+.app {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(100, 100, 255, 0.5) rgba(20, 20, 20, 0.3);
+}
+
+/* For WebKit-based browsers (Chrome, Edge, Safari) */
+.app::-webkit-scrollbar {
+  width: 8px; /* Adjust the scrollbar width */
+}
+
+.app::-webkit-scrollbar-track {
+  background: rgba(20, 20, 20, 0.3); /* Scrollbar track color */
+  border-radius: 4px;
+}
+
+.app::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 255, 0.5); /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.app::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 255, 0.8); /* Darker color on hover */
+}

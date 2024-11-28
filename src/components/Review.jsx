@@ -9,20 +9,9 @@ gsap.registerPlugin(useGSAP,ScrollTrigger)
 
 const Review = () => {
 
-    useGSAP(() => {
-        gsap.to('.scrub-slide', {
-            scrollTrigger: {
-                trigger: ".scrub-slide",
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1
-            },
-            x: '-200'
-        })
-    })
     return (
         <section id="review" className="pt-20">
-            <div className='border-b border-neutral-900 pb-4 '>
+            <div className='border-b border-neutral-900 pb-4'>
                 <motion.h2
                     initial={{ opacity: 0, y: -100 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -30,10 +19,27 @@ const Review = () => {
                     className="my-20 text-center text-4xl">
                     What my customers say
                 </motion.h2>
-                <div className="scrub-slide flex items-stretch gap-3 w-fit ">
-                    {REVIEWS.map(({ content, name, image, company }, index) => (
-                        <ReviewCard key={index} content={content} name={name} image={image} company={company} />
-                    ))}
+                <div className="overflow-x-auto  custom-scrollbar">
+                    <motion.div 
+                        className="flex items-stretch gap-3 w-fit scrub-slide pb-4"
+                        initial={{ x: -100, opacity: 0 }}
+                        whileInView={{ x: 0, opacity: 1 }}
+                        transition={{ 
+                            duration: 0.8,
+                            staggerChildren: 0.2
+                        }}
+                    >
+                        {REVIEWS.map(({ content, name, image, company }, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                            >
+                                <ReviewCard content={content} name={name} image={image} company={company} />
+                            </motion.div>
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </section>

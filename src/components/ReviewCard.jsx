@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 const ReviewCard = ({ content, name, image, company }) => {
     return (
-        <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col gap-4 lg:min-w-[420px]">
+        <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] min-h-[470px] flex flex-col gap-4 lg:min-w-[600px]">
             <div className="flex items-center gap-1 mb-3">
                 {[...Array(5)].map((_, index) => (
                     <span 

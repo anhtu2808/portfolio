@@ -15,7 +15,7 @@ export const EXPERIENCES = [
     year: "02/2024 - Present",
     role: "Full-Stack Developer",
     company: "SAT Mock Test System",
-    description: `Designed and developed a user interface using ReactJS to replicate the real SAT Test environment with high accuracy. Built and implemented the backend system using Spring Boot and RestfulAPI. Developed student management features, enabling teachers to create tests, manage students, and assign them to specific mock SAT tests.`,
+    description: `As a full-stack developer for the SAT Mock Test System, I developed a responsive, realistic test interface for students and built backend APIs to manage question banks, assign tests, and monitor student results. I implemented CI/CD with GitHub Actions for smooth deployment, ensuring the system was user-friendly and fully optimized for both mobile and desktop device.`,
     technologies: ["ReactJS", "Bootstrap", "Spring Boot", "MySQL", "CI/CD", "JWT"],
   },
   {
@@ -46,7 +46,7 @@ export const PROJECTS = [
     link: "https://sat.chasedream.edu.vn/",
     video: "https://www.youtube.com/embed/MdmjfHVekuA?si=LWdydJhoggkuLE83",
     description:
-      "A web-based platform that simulates the real SAT Test environment, allowing students to practice SAT tests in a realistic format, review thier choices, and enabling teachers to manage tests, assign students to do practice test/entrance test, and review their results.",
+      "The SAT Mock Test System allows students to practice the SAT in an interface that closely resembles the actual exam. It also provides teachers with essential tools to manage question banks, create and assign tests, and monitor student results and progress effectively.",
     technologies: ["ReactJS", "Redux", "Bootstrap", "Spring Boot", "MySQL", "MapStruct", "JWT", "Github Actions CI/CD"],
   },
   {
@@ -79,15 +79,16 @@ export const CONTACT = {
 
 export const REVIEWS = [
   {
-    content: 'Một người làm việc rất có trách nhiệm và chuyên nghiệp. Luôn hoàn thành công việc đúng tiến độ, nhiệt tình hỗ trợ khi công ty cần chỉnh sửa. Rất hài lòng khi được hợp tác.',
-    name: "Long Doan",
-    image: anh_long,
-    company: "TPK Tay Ninh Enterprise",
-  },
-  {
     content: 'Tú lúc nào cũng tỏa ra một niềm đam mê cháy bỏng với công nghệ thông tin, thái độ làm việc chuyên nghiệp và tinh thần trách nhiệm cao. Tú sẵn sàng vượt qua những thử thách, chịu khó học hỏi trau dồi chuyên môn để thực hiện được dự án mà ban đầu bạn chưa đủ năng lực để làm. Tú là một lập trình viên trẻ tài năng, đáng tin cậy để hợp tác và giao phó nhiệm vụ.',
     name: "Nguyen Ngoc An",
     image: anh_an,
     company: "SAT Chasedream",
+  },
+  {
+    content: 'Một người làm việc rất có trách nhiệm và chuyên nghiệp. Luôn hoàn thành công việc đúng tiến độ, nhiệt tình hỗ trợ khi công ty cần chỉnh sửa. Rất hài lòng khi được hợp tác.',
+    name: "Long Doan",
+    image: anh_long,
+    company: "TPK Tay Ninh Enterprise",
   }
+  
 ];
