@@ -1,5 +1,5 @@
 import anh_an from "../assets/anh_an.png";
-import people2 from "../assets/people-2.jpg";
+import anh_long from "../assets/anh_long.png";
 import pos from "../assets/projects/pos.png";
 import koimed from "../assets/projects/koimed.png";
 import sat from "../assets/projects/sat.png";
@@ -78,12 +78,11 @@ export const CONTACT = {
 };
 
 export const REVIEWS = [
-
   {
-    content: 'Impressive work! Fast loading times, intuitive design, and flawless backend integration. Highly recommend.',
-    name: "Ethan Caldwell",
-    image: people2,
-    company: "NexaWave",
+    content: 'Một người làm việc rất có trách nhiệm và chuyên nghiệp. Luôn hoàn thành công việc đúng tiến độ, nhiệt tình hỗ trợ khi công ty cần chỉnh sửa. Rất hài lòng khi được hợp tác.',
+    name: "Long Doan",
+    image: anh_long,
+    company: "TPK Tay Ninh Enterprise",
   },
   {
     content: 'Tú lúc nào cũng tỏa ra một niềm đam mê cháy bỏng với công nghệ thông tin, thái độ làm việc chuyên nghiệp và tinh thần trách nhiệm cao. Tú sẵn sàng vượt qua những thử thách, chịu khó học hỏi trau dồi chuyên môn để thực hiện được dự án mà ban đầu bạn chưa đủ năng lực để làm. Tú là một lập trình viên trẻ tài năng, đáng tin cậy để hợp tác và giao phó nhiệm vụ.',
