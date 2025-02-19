@@ -38,11 +38,11 @@ jobs:
         mkdir -p ~/.ssh
         echo "$SERVER_SSH_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H 178.128.86.47 >> ~/.ssh/known_hosts
+        ssh-keyscan -H 159.223.78.15 >> ~/.ssh/known_hosts
 
         # Xóa nội dung cũ và upload nội dung mới
         ssh root@178.128.86.47 "rm -rf /var/www/anhtudev.works/*"
         scp -r dist/* root@178.128.86.47:/var/www/anhtudev.works/
 
         # Reload Nginx
-        ssh root@178.128.86.47 "sudo systemctl reload nginx"
+        ssh root@159.223.78.15 "sudo systemctl reload nginx"
