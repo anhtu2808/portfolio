@@ -41,8 +41,8 @@ jobs:
         ssh-keyscan -H 159.223.78.15 >> ~/.ssh/known_hosts
 
         # Xóa nội dung cũ và upload nội dung mới
-        ssh root@178.128.86.47 "rm -rf /var/www/anhtudev.works/*"
-        scp -r dist/* root@178.128.86.47:/var/www/anhtudev.works/
+        ssh root@159.223.78.15 "rm -rf /var/www/anhtudev.works/*"
+        scp -r dist/* root@159.223.78.15:/var/www/anhtudev.works/
 
         # Reload Nginx
         ssh root@159.223.78.15 "sudo systemctl reload nginx"
