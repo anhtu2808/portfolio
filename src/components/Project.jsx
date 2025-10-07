@@ -2,8 +2,39 @@ import { PROJECTS } from "../constants"
 import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa"
 import { BiLinkExternal } from "react-icons/bi"
+import { useState, useEffect } from "react"
 
 const Project = () => {
+    const [openDropdowns, setOpenDropdowns] = useState({});
+
+    const toggleDropdown = (projectIndex) => {
+        setOpenDropdowns(prev => ({
+            ...prev,
+            [projectIndex]: !prev[projectIndex]
+        }));
+    };
+
+    const closeDropdown = (projectIndex) => {
+        setOpenDropdowns(prev => ({
+            ...prev,
+            [projectIndex]: false
+        }));
+    };
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (!event.target.closest('.dropdown-container')) {
+                setOpenDropdowns({});
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
         <section id="project" className="pt-10 md:pt-20">
             <div className='border-b border-neutral-900 pb-4'>
@@ -39,15 +70,62 @@ const Project = () => {
                                 <p className="mb-4 text-neutral-400 text-sm md:text-base">{project.description}</p>
                                 <div className="flex gap-2 md:gap-4 mb-4">
                                     {project.github && (
-                                        <a
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700 transition-colors"
-                                        >
-                                            <FaGithub className="text-lg md:text-xl" />
-                                            <span>GitHub</span>
-                                        </a>
+                                        <>
+                                            {Array.isArray(project.github) ? (
+                                                // Multiple repositories - show dropdown
+                                                <div className="relative dropdown-container">
+                                                    <button
+                                                        onClick={() => toggleDropdown(index)}
+                                                        className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700 transition-colors"
+                                                    >
+                                                        <FaGithub className="text-lg md:text-xl" />
+                                                        <span>GitHub</span>
+                                                        <svg 
+                                                            className={`w-4 h-4 transition-transform ${openDropdowns[index] ? 'rotate-180' : ''}`}
+                                                            fill="none" 
+                                                            stroke="currentColor" 
+                                                            viewBox="0 0 24 24"
+                                                        >
+                                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                        </svg>
+                                                    </button>
+                                                    
+                                                    {openDropdowns[index] && (
+                                                        <motion.div
+                                                            initial={{ opacity: 0, y: -10 }}
+                                                            animate={{ opacity: 1, y: 0 }}
+                                                            exit={{ opacity: 0, y: -10 }}
+                                                            className="absolute top-full left-0 mt-1 w-48 bg-neutral-800 rounded-md shadow-lg border border-neutral-700 z-10"
+                                                        >
+                                                            {project.github.map((repo, repoIndex) => (
+                                                                <a
+                                                                    key={repoIndex}
+                                                                    href={repo.url}
+                                                                    target="_blank"
+                                                                    rel="noopener noreferrer"
+                                                                    onClick={() => closeDropdown(index)}
+                                                                    className="flex items-center gap-2 px-4 py-3 text-sm hover:bg-neutral-700 transition-colors first:rounded-t-md last:rounded-b-md"
+                                                                >
+                                                                    <FaGithub className="text-sm" />
+                                                                    <span>{repo.name}</span>
+                                                                </a>
+                                                            ))}
+                                                        </motion.div>
+                                                    )}
+                                                </div>
+                                            ) : (
+                                                // Single repository - show direct link
+                                                <a
+                                                    href={project.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-md bg-neutral-800 hover:bg-neutral-700 transition-colors"
+                                                >
+                                                    <FaGithub className="text-lg md:text-xl" />
+                                                    <span>GitHub</span>
+                                                </a>
+                                            )}
+                                        </>
                                     )}
                                     {project.link && (
                                         <a
@@ -63,7 +141,7 @@ const Project = () => {
                                 </div>
                                 <div className="flex flex-wrap gap-2 mt-2">
                                     {project.technologies.map((technology, index) => (
-                                        <span key={index} className="mr-0 rounded-md bg-neutral-900 px-2 py-1 font-medium text-sm text-purple-800">
+                                        <span key={index} className="mr-0 rounded-md bg-neutral-900 px-2 py-1 font-medium text-sm text-purple-300">
                                             {technology}
                                         </span>
                                     ))}

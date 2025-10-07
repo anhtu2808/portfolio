@@ -1,7 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import profile_pic from "../assets/anhtuProfile.jpg"
 import { motion } from "framer-motion"
-import cvFile from "../assets/Đặng Mai Anh Tú - Intern Full-Stack Developer.pdf"
+import cvFile from "../assets/Đặng Mai Anh Tú -  Full Stack Developer CV.pdf"
 import { FaGithub } from "react-icons/fa";
 
 const container = (delay) => ({

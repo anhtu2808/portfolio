@@ -1,22 +1,26 @@
 import anh_an from "../assets/anh_an.png";
 import anh_long from "../assets/anh_long.png";
-import pos from "../assets/projects/pos.png";
 import koimed from "../assets/projects/koimed.png";
 import sat from "../assets/projects/sat.png";
-import TPK from "../assets/projects/TPK.png";
-export const HERO_CONTENT = `Welcome! I'm Tu, a passionate full stack developer with a knack for crafting robust and scalable web applications. With 1 year of hands-on experience, I have honed my skills in technologies like ReactJS, Spring Boot, WordPress, MySQL, Github Actions, AWS and more.`;
+export const HERO_CONTENT = `Welcome! I'm Tu, A final-year Software Engineering student at FPT University and Full-Stack Software Engineer with hands-on experience in developing scalable web applications, backend APIs, and cloud deployments. Experienced in freelance projects, including building and deploying multi-tenant SaaS applications. Skilled in Java, React, AWS, and CI/CD, with strong problem-solving and teamwork abilities.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 1 year of professional experience, I have worked with a variety of technologies, including ReactJS, Spring Boot, WordPress, AWS, MySQL. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies.
-
 `;
 
 export const EXPERIENCES = [
   {
+    year: "12/2024 - 06/2025",
+    role: "Backend Developer Internship",
+    company: "FPT Software",
+    description: "Developed and maintained backend API services for a $10 million automotive startup in the Japanese market. Gained hands-on experience in deploying and troubleshooting applications on AWS, utilizing services such as Lambda, EC2, ECS, RDS, S3 and CloudWatch ",
+    technologies: ["Python", "Fast API", "AWS (EC2, ECS, Lambda, RDS, IAM)", "Elasticsearch", "Microservices", "Docker"],
+  },
+  {
     year: "02/2024 - Present",
     role: "Full-Stack Developer",
-    company: "SAT Mock Test System",
-    description: `As a full-stack developer for the SAT Mock Test System, I developed a responsive, realistic test interface for students and built backend APIs to manage question banks, assign tests, and monitor student results. I implemented CI/CD with GitHub Actions for smooth deployment, ensuring the system was user-friendly and fully optimized for both mobile and desktop device.`,
-    technologies: ["ReactJS", "Bootstrap", "Spring Boot", "MySQL", "CI/CD", "JWT"],
+    company: "SAT Chasedream",
+    description: `As a Full-Stack Developer for SAT Chasedream, I designed and developed a multi-tenant LMS platform specialized for Digital SAT preparation. Built a responsive and realistic test-taking interface, and implemented backend APIs to manage question banks, test assignments, and student performance tracking. Integrate LLM to develop explanation feature. Streamlined deployment with GitHub Actions (CI/CD), ensuring a user-friendly, scalable, reliability system optimized for both mobile and desktop currently serving over 400 active users.`,
+    technologies: ["ReactJS", "Bootstrap", "Spring Boot", "MySQL", "CI/CD", "JWT", "AWS(SES, SQS, S3)", "Docker"],
   },
   {
     year: "03/2023 - 11/2023",
@@ -28,7 +32,30 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
-
+  {
+    title: "Metro Ticketing System",
+    image: null,
+    github: [
+      { name: "Admin Portal", url: "https://github.com/anhtu2808/Metro-Admin" },
+      { name: "Backend", url: "https://github.com/anhtu2808/Metro-Backend" },
+      { name: "Mobile App", url: "https://github.com/anhtu2808/Metro-Mobile" }
+    ],
+    link: "https://metro.anhtudev.works",
+    video: "https://www.youtube.com/embed/videoseries?si=Tgg3Is-NxhOnuPxe&amp;list=PLlolFUWzABBn56QjcVsYl5H4e6DBpEp0h",
+    description:
+      " a comprehensive mobile solution aimed at modernizing the urban travel experience within Ho Chi Minh City's public transit network. It is developed using Microservices architecture, with React Native for the mobile app and Spring Boot for the backend. The system includes features for managing users, tickets, and payments, as well as providing real-time updates on the status of the public transit network.",
+    technologies: ["Spring Boot", "Docker", "Microservices", "MySQL", "Kafka", "ReactJS", "React Native", "Ant Design", "Redux Toolkit", "Redux Thunk", "Axios (Interceptor)"],
+  },
+  {
+    title: "SAT Chasedream LMS",
+    image: sat,
+    github: null,
+    link: "https://sat.chasedream.edu.vn/",
+    video: "https://www.youtube.com/embed/XAtOByOhjAg?si=W2wxW8J994w4GZfq",
+    description:
+      "Chasdream LMS is a modern, multi-tenant SaaS platform specifically engineered for students and educational centers preparing for the Digital SAT. The platform is designed to precisely simulate the official Bluebook™ testing environment, offering an adaptive testing experience and a suite of powerful tools for personalized learning. It serves not only as an effective practice tool for students but also as a robust management solution for B2B clients like tutoring centers.",
+    technologies: ["ReactJS", "Redux", "Bootstrap", "Spring Boot", "MySQL", "MapStruct", "JWT", "Github Actions CI/CD"],
+  },
   {
     title: "Koi Veterinarian System",
     image: koimed,
@@ -37,38 +64,9 @@ export const PROJECTS = [
     video: "https://www.youtube.com/embed/sSDgWOXnOhg?si=2bytXfmx5kbHXpdr",
     description:
       "A web application designed for Koi fish veterinary services, It enables users to book veterinary appointments, manage treatment schedules, and track pond health. The system includes features for managing doctors, treatments, and service schedules, as well as providing news updates, service ratings, and user feedback. Perfect for ensuring the well-being of your Koi fish and maintaining a healthy pond environment.",
-    technologies: ["ReactJS", "Redux", "Bootstrap"  , "Ant Design", "Spring Boot", "AWS S3", "VNPay", "Github Actions"],
+    technologies: ["ReactJS", "Redux", "Bootstrap", "Ant Design", "Spring Boot", "AWS S3", "VNPay", "Github Actions"],
   },
-  {
-    title: "SAT Mock Test System",
-    image: sat,
-    github: null,
-    link: "https://sat.chasedream.edu.vn/",
-    video: "https://www.youtube.com/embed/MdmjfHVekuA?si=LWdydJhoggkuLE83",
-    description:
-      "The SAT Mock Test System allows students to practice the SAT in an interface that closely resembles the actual exam. It also provides teachers with essential tools to manage question banks, create and assign tests, and monitor student results and progress effectively.",
-    technologies: ["ReactJS", "Redux", "Bootstrap", "Spring Boot", "MySQL", "MapStruct", "JWT", "Github Actions CI/CD"],
-  },
-  {
-    title: "POS Application",
-    image: pos,
-    github: "https://github.com/anhtu2808/POS-Application",
-    link: null,
-    video: "https://www.youtube.com/embed/5yythVfMz_w?si=xSTpxuVNUqzaOWW-",
-    description:
-      "A Desktop Application with barcode scanning functionality, supporting checkout processes, inventory management, and warehouse organization. Developed using WPF and .NET Framework.",
-    technologies: ["C#", ".NET Framework", "WPF", "SQL Server"],
-  },
-  {
-    title: "TPK Enterprise Website",
-    image: TPK,
-    github: null,
-    link: "https://tpk.tayninh.vn",
-    video: null,
-    description:
-      "A corporate website for TPK Enterprise, featuring a responsive design and integration with WordPress.",
-    technologies: ["WordPress", "Elementor", "SMTP", "Linux"],
-  }
+
 ];
 
 export const CONTACT = {
@@ -90,5 +88,5 @@ export const REVIEWS = [
     image: anh_long,
     company: "TPK Tay Ninh Enterprise",
   }
-  
+
 ];
