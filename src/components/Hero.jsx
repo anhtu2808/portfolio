@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="w-full lg:w-1/2 lg:p-8">
                         <div className="flex justify-center mt-8 lg:mt-0">
                             <motion.img
-                                className="rounded"
+                                className="rounded-2xl"
                                 variants={container(1.5)}
                                 initial={{ x: 100, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
