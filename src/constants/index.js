@@ -2,17 +2,26 @@ import anh_an from "../assets/anh_an.png";
 import anh_long from "../assets/anh_long.png";
 import koimed from "../assets/projects/koimed.png";
 import sat from "../assets/projects/sat.png";
-export const HERO_CONTENT = `Welcome! I'm Tu, A final-year Software Engineering student at FPT University and Full-Stack Software Engineer with hands-on experience in developing scalable web applications, backend APIs, and cloud deployments. Experienced in freelance projects, including building and deploying multi-tenant SaaS applications. Skilled in Java, React, AWS, and CI/CD, with strong problem-solving and teamwork abilities.`;
+export const HERO_CONTENT = `Welcome! I'm Tu, a Software Engineer at Maytrix and a final-year Software Engineering student at FPT University. I build scalable web applications, backend APIs, and cloud-based systems with hands-on experience across EdTech, SaaS, and enterprise products. Skilled in Java, React, Spring Boot, AWS, and CI/CD, I focus on shipping reliable features that improve product quality and user experience.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 1 year of professional experience, I have worked with a variety of technologies, including ReactJS, Spring Boot, WordPress, AWS, MySQL. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies.
 `;
 
 export const EXPERIENCES = [
   {
-    year: "12/2024 - 06/2025",
+    year: "08/2025 - Present",
+    role: "Junior Full Stack Developer",
+    company: "Maytrix",
+    description:
+      "Key member of an EdTech startup building an online exam practice platform for middle school students. Developed and maintained full-stack features, worked closely with BA, PO, and UI/UX designers to turn product requirements into technical solutions, and contributed to a successful launch now serving 3,000+ active users.",
+    technologies: ["ReactJS", "Spring Boot", "Java", "MySQL", "Redux Toolkit", "Docker", "AWS (Route53, EC2, S3, SES)"],
+  },
+  {
+    year: "12/2024 - 07/2025",
     role: "Backend Developer Internship",
     company: "FPT Software",
-    description: "Developed and maintained backend API services for a $10 million automotive startup in the Japanese market. Gained hands-on experience in deploying and troubleshooting applications on AWS, utilizing services such as Lambda, EC2, ECS, RDS, S3 and CloudWatch ",
+    description:
+      "Developed and maintained backend API services for a $10 million automotive startup in the Japanese market. Gained hands-on experience deploying and troubleshooting applications on AWS, working with Lambda, EC2, ECS, RDS, S3, and CloudWatch in a microservices environment.",
     technologies: ["Python", "Fast API", "AWS (EC2, ECS, Lambda, RDS, IAM)", "Elasticsearch", "Microservices", "Docker"],
   },
   {
