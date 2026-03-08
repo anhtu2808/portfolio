@@ -2,7 +2,7 @@ import anh_an from "../assets/anh_an.png";
 import anh_long from "../assets/anh_long.png";
 import koimed from "../assets/projects/koimed.png";
 import sat from "../assets/projects/sat.png";
-export const HERO_CONTENT = `Welcome! I'm Tu, a Software Engineer at Maytrix and a final-year Software Engineering student at FPT University. I build scalable web applications, backend APIs, and cloud-based systems with hands-on experience across EdTech, SaaS, and enterprise products. Skilled in Java, React, Spring Boot, AWS, and CI/CD, I focus on shipping reliable features that improve product quality and user experience.`;
+export const HERO_CONTENT = `Welcome! I'm Tu, a Software Engineer and a final-year Software Engineering student at FPT University. I build scalable web applications, backend APIs, and cloud-based systems with hands-on experience across EdTech, SaaS, and enterprise products. Skilled in Java, React, Spring Boot, AWS, and CI/CD, I focus on shipping reliable features that improve product quality and user experience.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 1 year of professional experience, I have worked with a variety of technologies, including ReactJS, Spring Boot, WordPress, AWS, MySQL. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies.
 `;
